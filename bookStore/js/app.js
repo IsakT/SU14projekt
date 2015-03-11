@@ -10,8 +10,12 @@ var app = angular.module("bookStore", ["ngRoute"]).
 						  controller: "genreController"}).
 			when("/add", {templateUrl: "partials/addView.html",
 						  controller: "addController"}).
+			when("/authorDetails", {templateUrl: "partials/authorDetailView.html",
+						  controller: "authorDetailController"}).
+			when("/bookDetails", {templateUrl: "partials/bookDetailView.html",
+						  controller: "bookDetailController"}).
 			otherwise({
-				redirectTo: "/"
+				redirectTo: "/home"
 			});
 
 	});
